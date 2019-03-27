@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="BulbBlockchain.BulbBlockchain.controller.bulbblockchain" xmlns="sap.m">
+    <Table id="samplesTable" headerText="Smart Bulb with Blockchain" class="sapUiLargeMarginBottom">
+        <columns>
+            <Column width="30%">
+                <Text text="Light Status" />
+            </Column>
+            <Column>
+                <RadioButtonGroup id="onofflight" columns="8" selectedIndex="0" valueState="None" width="auto" editable="true" enabled="true" textDirection="Inherit" select="_onRadioButtonGroupSelect">
+                    <buttons>
+                        <RadioButton text="Off" editable="true" enabled="true" visible="true" width="auto" selected="false" />
+                        <RadioButton text="On" editable="true" enabled="true" visible="true" width="auto" selected="false" />
+                    </buttons>
+                </RadioButtonGroup>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Label text="Set RGB" />
+                    <Input id="colorS" type="Text" width="200px" placeholder="Enter Color ..." showValueHelp="true" valueHelpRequest="openSimplifiedModeSample" change="handleInputChange" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    <OverflowToolbar id="buttonid">
+        <Button text="Send to the Blockchain" type="Accept" press="onButtonPress" />
+    </OverflowToolbar>
+</mvc:View>
